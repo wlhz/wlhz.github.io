@@ -1,23 +1,148 @@
-﻿<!DOCTYPE html> 
-<html lang="zh">
+﻿<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>ICAN</title>
+<meta name="author" content="ICAN1" />
+    <meta name="keywords" content="ICAN2" />
 
+<link rel="shortcut icon" href="http://www.pinghai.org/pinghai.ico" />
+
+<link rel="stylesheet" href="style/css/jquery.fullPage.css" />
+<link rel="stylesheet" href="style/css/base.css" />
+<link rel="stylesheet" href="style/css/welcome.css" />
+<link rel="stylesheet" href="style/css/jquery.bxslider.css">
+
+<script src="style/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="style/js/jquery.fullPage.min.js"></script>
+<script type="text/javascript" src="style/js/jquery.bxslider.js"></script>
+
+<script type="text/javascript" src="style/js/main.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+		my_section1.init();
+  $('#welcome').fullpage({
+	'verticalCentered': false,
+	'css3': true,
+	'sectionsColor': ['#6cbb52','#e89c38', '#40a3e1'],
+	'navigation': true,
+	'navigationPosition': 'right',
+			//'easing' : 'easeInOutBounce',
+			'afterRender' : function (index,anchorLink ) {
+				$(".iphone_img").addClass('fadeInTop');
+			},
+			'afterSlideLoad':function(index ) {
+
+			}
+			,
+	'afterLoad': function(anchorLink, index){
+				if( index == 2) {
+					$(".iphone_img").removeClass('fadeInTop');
+				}
+				if(index==3){
+					my_section1.init();
+				}
+				if(index==1){
+					my_section1.init();
+				}
+				if(index==2){
+					my_section2.init();
+				}
+
+	},
+	'onLeave': function(index, nextIndex, direction){
+	  if( nextIndex  == 1 ) {
+					$(".iphone_img").addClass('fadeInTop');
+				}
+				if(index==1){
+					my_section1.anim();
+				}
+				if(index==3){
+					my_section1.anim();
+				}
+				if(index==2){
+					my_section2.anim();
+				}
+	}
+  });
+});
+</script>
+</head>
 <body>
-<h1>wlhz的<del>超级难看的</del>主页</h1>
 
-<p>
-	就搞个基础的目录的功能吧
-	首先是
-	<a href="http://wlhz.github.io/Tetris">抄来的俄罗斯方块</a>
-	<a href="http://wlhz.github.io/Reversi">自己做的黑白棋</a>
-	<a href="http://wlhz.github.io/Gobang">五子棋</a>
-	<a href="http://wlhz.github.io/Xiangqi">象棋</a>
-	<a href="http://wlhz.github.io/Junqi">军旗</a>
-</p>
+    <div id="welcome">
+        <div class="section" id="section0">
+           <div class="my_section">
+                <div class="my_codoon fl">
+                    <div class="text1_box">
+                        <div class="text1 fl">公众号：平海那些事</div>
+                        <div class="blank0"></div>
+                    </div>
+                    <p><div class="text2">小组成员：李彦龙，宋子涵，赵嘉诚</div></p>
+                    <div class="download_box">
+                        <div class="left">
+                        </div>
+                        <div class="right">
+                            <!--
+							<a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI1ODIxNzI3OA==&scene=122&from=timeline&isappinstalled=0#wechat_redirect" class="item pc_download item_pc" style="margin-bottom:15px;">iPhone版下载</a>
+                            <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI1ODIxNzI3OA==&scene=122&from=timeline&isappinstalled=0#wechat_redirect" class="item pc_download item_pc">Andriod版下载</a>
+                            <a class="item mobile_download mobile_icon"><img src="style/images/now_download.png" alt="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI1ODIxNzI3OA==&scene=122&from=timeline&isappinstalled=0#wechat_redirect"></a>
+							-->
+						</div>
+                        <div class="blank10"></div>
+                    </div>
+                </div>
+
+                <div class="blank0"></div>
+           </div>
+        </div>
+		<div class="section" id="section1">
+            <div class="my_section ">
+               <div class="rom_txt fr">
+                    <h2 class="bigtit">避雷针状态</h2>
+                    <ul >
+                      <p > <font color="red">1号避雷针电压10v，超出额定电压，已通知相关维修人员</font></p>
+                      <p >2号避雷针电压1v，状态正常</p>
+                      <p >3号避雷针电压1v，状态正常</p>
+                      <p >4号避雷针电压1v，状态正常</p>
+                      <p >5号避雷针电压1v，状态正常</p>
+                      <p >6号避雷针电压1v，状态正常</p>
+                    </ul>
+                </div>
+                <div class="cod_rom fl">
+                    <img src="style/images/rom1.png" alt="">
+                    <img src="style/images/rom2.png" alt="">
+                    <img src="style/images/rom3.png" alt="">
+                    <img src="style/images/rom4.png" alt="">
+                    <img src="style/images/rom5.png" alt="">
+                    <img src="style/images/rom6.png" alt="">
+                    <img src="style/images/rom7.png" alt="">
+                    <img src="style/images/rom8.png" alt="">
+                    <img src="style/images/rom9.png" alt="">
+                </div>
+                <div class="blank0"></div>
+            </div>
+        </div>
+      
+    </div>
+    <div class="fixed head">
+        <div class="head_content">
+            <div class="icon logo logo_blue fl" style="width: 193px; height: 46px"></div>
+            <div class="fr login_box">
+               
+                <a href="#" class="">制作者</a>
+                <span class="">|</span>
+                <a href="#" class="">赵嘉诚</a>
+                
+            </div>
+        </div>
+        <div class="line"></div>
+    </div>
+
 
 </body>
-
-</head>
 </html>
-
